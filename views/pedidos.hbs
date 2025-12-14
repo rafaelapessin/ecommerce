@@ -1,0 +1,41 @@
+<h2 class="mb-4">Gerenciamento de Pedidos</h2>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Data da Compra</th>
+      <th>Usuário</th>
+      <th>Última Atualização</th>
+      <th>Valor Total</th>
+      <th>Qtd. Itens</th>
+      <th>Status</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    {{#each pedidos}}
+    <tr>
+      <td>{{criado_em}}</td>
+      <td>{{Usuario.nome}}</td>
+      <td>{{atualizado_em}}</td>
+      <td>R$ {{valor_total}}</td>
+      <td>{{ItemPedidos.length}}</td>
+      <td>{{status}}</td>
+      <td>
+        <a href="/pedidos/status/{{id}}/CONCLUIDO" class="btn btn-success btn-sm">
+          Concluir
+        </a>
+        <a href="/pedidos/status/{{id}}/SUSPENSO" class="btn btn-warning btn-sm">
+          Suspender
+        </a>
+        <a href="/pedidos/status/{{id}}/CANCELADO" class="btn btn-danger btn-sm">
+          Cancelar
+        </a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+<a href="/" class="btn btn-secondary">Voltar</a>

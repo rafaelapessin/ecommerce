@@ -1,0 +1,16 @@
+<div class="row">
+{{#each produtos}}
+<div class="col-md-3">
+    <div class="card mb-3">
+        <div class="card-body">
+
+            <h5>{{nome}}</h5>
+            <p>R$ {{preco}}</p>
+            <p>Estoque: {{estoque}}</p>
+            <a href="/produtos/{{_id}}" class="btn btn-primary">Detalhes</a>
+            
+        </div>
+    </div>
+</div>
+{{/each}}
+</div>

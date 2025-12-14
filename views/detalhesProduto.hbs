@@ -1,0 +1,29 @@
+<h2 class="mb-3">{{produto.nome}}</h2>
+
+<div class="card">
+  <div class="card-body">
+    
+    <p><strong>Preço:</strong> R$ {{produto.preco}}</p>
+    <p><strong>Estoque disponível:</strong> {{produto.estoque}}</p>
+
+    <hr>
+
+    <h5>Detalhes do Produto</h5>
+    <ul class="list-group mb-3">
+      {{#each produto.detalhes}}
+        <li class="list-group-item">
+          <strong>{{@key}}:</strong> {{this}}
+        </li>
+      {{/each}}
+    </ul>
+
+    <a href="/compras/{{produto._id}}" class="btn btn-success">
+      Comprar
+    </a>
+
+    <a href="/" class="btn btn-secondary">
+      Voltar
+    </a>
+
+  </div>
+</div>
