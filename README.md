@@ -17,41 +17,6 @@ A aplicação segue o padrão de **arquitetura MVC** (Model, View, Controller) e
 - **MySQL** (relacional) para gerenciamento de usuários e pedidos.
 - **MongoDB** (não-relacional) para gerenciamento de produtos, com detalhamento dinâmico de informações.
 
-### Estrutura de Pastas:
-├── bin/
-│ └── www.js
-├── controller/
-│ ├── produtoController.js
-│ ├── pedidoController.js
-│ └── povoamentoController.js
-├── model/
-│ ├── sequelize/
-│ │ ├── conexaoRelacional.js
-│ │ ├── Usuario.js
-│ │ ├── Pedido.js
-│ │ └── ItemPedido.js
-│ └── mongoose/
-│ ├── conexaoMongo.js
-│ └── Produto.js
-├── public/
-│ └── bootstrap/
-│ └── (arquivos Bootstrap offline)
-├── routes/
-│ ├── index.js
-│ ├── produtos.js
-│ └── pedidos.js
-├── views/
-│ ├── layouts/
-│ │ └── main.handlebars
-│ ├── home.handlebars
-│ ├── detalhesProduto.handlebars
-│ ├── compra.handlebars
-│ ├── confirmacao.handlebars
-│ ├── dashboard.handlebars
-│ └── pedidos.handlebars
-├── app.js
-├── package.json
-
 ## Funcionalidades
 A aplicação de e-Commerce oferece as seguintes funcionalidades:
 
@@ -83,14 +48,22 @@ Siga os passos abaixo para rodar a aplicação localmente:
 No terminal, na pasta do projeto, execute: 
 npm install
 
-2. **Iniciar o servidor**:
+
+- sudo systemctl status mysql
+- sudo systemctl start mysql
+
+1. **Conferir se o MongoDB está rodando**:
+- sudo systemctl status mongod
+- sudo systemctl start mongod
+
+4. **Iniciar o servidor**:
 Para iniciar o servidor da aplicação, execute: 
 npm start
 
-3. **Acessar a aplicação:**:
+5. **Acessar a aplicação:**:
 Abra seu navegador e acesse o seguinte endereço: 
 http://localhost:3000
 
-4. **Povoar o banco de dados**: 
+6. **Povoar o banco de dados**: 
 Para popular o banco com usuários e produtos iniciais, acesse:
 http://localhost:3000/povoar
