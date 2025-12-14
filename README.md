@@ -2,6 +2,7 @@
 # Projeto E-commerce Fullstack
 
 Aplicação Web Fullstack desenvolvida como atividade avaliativa da disciplina **Desenvolvimento Backend I**.
+OBS: Foi utilizado o MongoDB Atlas, uma solução de banco de dados em nuvem, acessada via Mongoose. Essa abordagem elimina a dependência de um serviço local, facilita a portabilidade do sistema e permite maior escalabilidade da aplicação.
 
 ## Tecnologias Utilizadas
 - **Node.js**: Ambiente de execução JavaScript no servidor
@@ -48,11 +49,11 @@ Siga os passos abaixo para rodar a aplicação localmente:
 No terminal, na pasta do projeto, execute: 
 npm install
 
-
+2. **Conferir se o MongoDB está rodando**:
 - sudo systemctl status mysql
 - sudo systemctl start mysql
 
-1. **Conferir se o MongoDB está rodando**:
+3. **Conferir se o MongoDB está rodando**:
 - sudo systemctl status mongod
 - sudo systemctl start mongod
 

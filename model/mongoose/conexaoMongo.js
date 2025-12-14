@@ -1,2 +1,10 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/ecommerce');
+require('dotenv').config();
+
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => {
+    console.log('MongoDB Atlas conectado com sucesso');
+  })
+  .catch((erro) => {
+    console.error('Erro ao conectar no MongoDB Atlas:', erro);
+  });
